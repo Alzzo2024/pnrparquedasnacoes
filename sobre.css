@@ -1,0 +1,78 @@
+.sobre-main {
+    margin-top: 0;
+}
+
+.sobre-banner {
+    background-color: #211c1c;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.sobre-banner h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.sobre-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.sobre-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sobre-intro h2 {
+    color: #184380;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sobre-intro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.valor-card {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.valor-card i {
+    font-size: 2.5rem;
+    color: #e91d30;
+    margin-bottom: 20px;
+}
+
+.valor-card h3 {
+    color: #184380;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .valores-grid,
+    .sobre-detalhes,
+
+    .sobre-banner {
+        padding: 60px 20px;
+    }
+
+    .sobre-banner h1 {
+        font-size: 2rem;
+    }
+}

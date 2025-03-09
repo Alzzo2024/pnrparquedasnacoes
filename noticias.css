@@ -1,0 +1,153 @@
+.noticias-main {
+    margin-top: 0;
+}
+
+.noticias-hero {
+    background: linear-gradient(rgba(48, 72, 138, 0.9), rgba(48, 72, 138, 0.9)), url('Images/parquedasnacoesimage.jpeg');
+    background-size: cover;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.noticias-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.noticias-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.noticia-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.noticia-card:hover {
+    transform: translateY(-5px);
+}
+
+.noticia-imagem {
+    height: 200px;
+    overflow: hidden;
+}
+
+.noticia-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.noticia-card:hover .noticia-imagem img {
+    transform: scale(1.05);
+}
+
+.noticia-content {
+    padding: 25px;
+}
+
+.noticia-data {
+    color: #e91d30;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.noticia-content h2 {
+    color: #184380;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.noticia-preview {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.noticia-expandida {
+    display: none;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.noticia-expandida.active {
+    display: block;
+}
+
+.noticia-expandida p {
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.noticia-expandida ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.noticia-expandida li {
+    margin: 10px 0;
+    color: #444;
+}
+
+.ler-mais {
+    display: inline-block;
+    color: #184380;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: color 0.2s ease;
+}
+
+.ler-mais:hover {
+    color: #e91d30;
+}
+
+.load-more {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.load-more-btn {
+    background: #184380;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background: #184380;
+}
+
+@media (max-width: 1024px) {
+    .noticias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .noticias-grid {
+        grid-template-columns: 1fr;
+    }
+}

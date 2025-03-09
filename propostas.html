@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNR - Parque das Nações - Propostas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="propostas.css">
+    <link rel="icon" type="image/x-icon" href="Images/PNRPNlogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/" target="_blank" draggable="true">
+                    <img src="Images/PNRPNlogo.png" alt="Logo PNRPN" id="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">INÍCIO</a>
+                <a href="propostas.html">PROPOSTAS</a>
+                <a href="noticias.html">NOTÍCIAS</a>
+                <a href="sobre.html">SOBRE</a>
+                <a href="contatos.html">CONTATOS</a>
+                <button class="aderir-btn">ADERIR</button>
+            </div>
+        </nav>
+    </header>
+    <main class="propostas-main">
+        <div class="propostas-hero">
+            <h1>PROPOSTAS</h1>
+            <p>Conheça as nossas propostas para a freguesia.</p>
+        </div>
+    
+        <div class="filtros-container">
+            <div class="filtros-wrapper">
+                <button class="filtro-btn active" data-filter="all">Todas</button>
+                <button class="filtro-btn" data-filter="economia">Economia</button>
+                <button class="filtro-btn" data-filter="educacao">Educação</button>
+                <button class="filtro-btn" data-filter="saude">Saúde</button>
+                <button class="filtro-btn" data-filter="seguranca">Segurança</button>
+            </div>
+        </div>
+    
+        <section class="topico-section" data-categoria="economia">
+            <div class="topico-banner">
+                <div class="topico-content">
+                    <h2>Economia</h2>
+                </div>
+            </div>
+            <div class="propostas-grid">
+                <div class="proposta-card">
+                    <div class="card-header">
+                        <div class="header-main">
+                            <div class="categoria-tag">Economia</div>
+                            <h3>Lorem Ipsum</h3>
+                            <span class="proposta-data">00 Janeiro 0000</span>
+                        </div>
+                        <span class="status aprovado">Aprovado</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="proposta-detalhes">
+                            <h4>Objetivos</h4>
+                            <ul>
+                                <li>Lorem Ipsum</li>
+                            </ul>
+                            <h4>Impacto Esperado</h4>
+                            <p>Lorem Ipsum</p>
+                        </div>
+                        <div class="proposta-footer">
+                            <span class="implementacao">Implementação: 2999</span>
+                            <button class="ver-mais-btn">Ver Documento Completo</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mais propostas aqui -->
+            </div>
+        </section>
+    
+        <!-- Mais secções de tópicos aqui -->
+    </main>
+</body>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="social-links">
+                <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#telegram"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Navegação</h4>
+            <a href="index.html">INÍCIO</a>
+            <a href="propostas.html">PROPOSTAS</a>
+            <a href="noticias.html">NOTÍCIAS</a>
+            <a href="sobre.html">SOBRE</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contatos</h4>
+            <p>Email: pnrparquedasnacoes@gmail.com</p>
+            <p>Telefone: +351 929 235 180</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Newsletter</h4>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Seu email">
+                <button class="subscribe-btn">Subscrever</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 PNR/Ergue-te Parque das Nações. Todos os direitos reservados.</p>
+    </div>
+</footer>
+<script src="propostas.js"></script>
+</html>
