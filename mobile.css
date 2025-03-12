@@ -1,0 +1,207 @@
+@media screen and (max-width: 768px) {
+    /* Header & Navigation */
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #30488a;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    /* Hero Sections */
+    .propostas-hero h1,
+    .noticias-hero h1,
+    .sobre-hero h1,
+    .contactos-hero h1 {
+        font-size: 2rem;
+        padding: 0 20px;
+    }
+
+    /* Main Banner */
+    .banner {
+        height: 250px;
+    }
+
+    .small-banner {
+        height: 150px;
+    }
+
+    /* News Grid */
+    .news-grid,
+    .noticias-grid,
+    .propostas-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .news-card,
+    .noticia-card,
+    .proposta-card {
+        margin-bottom: 20px;
+    }
+
+    /* Propostas Page */
+    .filtros-wrapper {
+        overflow-x: auto;
+        padding: 10px 20px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filtro-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .topico-banner {
+        padding: 30px 20px;
+    }
+
+    /* Sobre Page */
+    .valores-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .sobre-detalhes {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .equipa-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    /* Contactos Page */
+    .info-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .contactos-content {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .mapa {
+        height: 300px;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* General Spacing */
+    .section-padding {
+        padding: 40px 20px;
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Buttons */
+    .aderir-btn,
+    .news-button,
+    .submit-btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Text Adjustments */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+    p { font-size: 1rem; }
+}
+
+/* Small devices (landscape phones) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .news-grid,
+    .noticias-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .news-grid,
+    .noticias-grid,
+    .propostas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Touch devices */
+@media (hover: none) {
+    .card-hover-effect {
+        display: none;
+    }
+    
+    .touch-friendly {
+        padding: 15px;
+    }
+}
