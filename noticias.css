@@ -139,15 +139,3 @@
 .load-more-btn:hover {
     background: #184380;
 }
-
-@media (max-width: 1024px) {
-    .noticias-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .noticias-grid {
-        grid-template-columns: 1fr;
-    }
-}
