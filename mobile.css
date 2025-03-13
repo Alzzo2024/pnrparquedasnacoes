@@ -1,46 +1,58 @@
+/* Mobile Navigation Styles */
 @media screen and (max-width: 768px) {
-    /* Header & Navigation */
     header {
-        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 20px;
+        background: white;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     .nav-links {
-        display: none;
         position: fixed;
-        top: 80px;
-        left: 0;
+        top: 0;
+        left: -100%;
         width: 100%;
+        height: 100vh;
         background: white;
-        padding: 20px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding-top: 80px;
+        transition: 0.3s ease-in-out;
+        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        z-index: 999;
+        gap: 30px;
     }
 
     .nav-links.active {
-        display: flex;
+        left: 0;
     }
 
     .hamburger {
         display: block;
+        position: relative;
+        z-index: 1001;
+        border: none;
+        background: transparent;
+        width: 30px;
+        height: 30px;
         cursor: pointer;
-        padding: 10px;
-        z-index: 1000;
     }
 
     .hamburger span {
         display: block;
-        width: 25px;
+        width: 30px;
         height: 3px;
         background: #211c1c;
-        margin: 5px 0;
-        transition: 0.3s;
+        margin: 6px 0;
+        transition: 0.4s;
+        border-radius: 2px;
     }
 
     .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(8px, 8px);
     }
 
     .hamburger.active span:nth-child(2) {
@@ -48,68 +60,65 @@
     }
 
     .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: rotate(-45deg) translate(8px, -8px);
     }
 
-    /* Main Banner */
+    /* Main Content Adjustments */
+    main {
+        margin-top: 80px;
+    }
+
     .banner {
-        height: 180px;
+        height: 200px;
+        background-position: center;
     }
 
     .small-banner {
         height: 150px;
     }
 
-    /* Sobre Page */
-    .sobre-content {
-        padding: 20px;
-    }
-
-    .valores-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .sobre-detalhes {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .equipa-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    /* News Grid */
+    /* Grid Layouts */
+    .valores-grid,
+    .sobre-detalhes,
+    .equipa-grid,
     .news-grid,
     .noticias-grid,
     .propostas-grid {
         grid-template-columns: 1fr;
-        padding: 0 20px;
-        gap: 20px;
+        gap: 25px;
+        padding: 20px;
     }
 
+    /* Cards */
     .news-card,
     .noticia-card,
     .proposta-card {
         margin-bottom: 20px;
+        width: 100%;
     }
 
     /* Footer */
     .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;
+        padding: 30px 20px;
         text-align: center;
-        padding: 20px;
     }
 
     .social-links {
         justify-content: center;
+        margin: 20px 0;
     }
 
     .newsletter-form {
         flex-direction: column;
-        gap: 10px;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        padding: 12px;
     }
 
     /* Buttons */
@@ -117,12 +126,13 @@
     .news-button,
     .submit-btn {
         width: 100%;
+        padding: 12px;
         margin: 10px 0;
     }
 
     /* Typography */
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; }
-    h3 { font-size: 1.2rem; }
-    p { font-size: 1rem; }
+    h1 { font-size: 2rem; line-height: 1.2; }
+    h2 { font-size: 1.75rem; line-height: 1.3; }
+    h3 { font-size: 1.4rem; line-height: 1.4; }
+    p { font-size: 1rem; line-height: 1.6; }
 }
