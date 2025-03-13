@@ -5,9 +5,9 @@
 
 @media screen and (max-width: 768px) {
     body {
+        max-width: 100%;
         overflow-x: hidden;
-        width: 100%;
-        touch-action: manipulation;
+        position: relative;
     }
 
     /* Header & Navigation */
@@ -48,10 +48,19 @@
         display: flex;
     }
 
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        padding: 10px;
+    @media screen and (max-width: 768px) {
+        .hamburger {
+            display: block !important;
+            position: relative;
+            z-index: 1001;
+        }
+    
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
     }
 
     .hamburger span {
