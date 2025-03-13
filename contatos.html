@@ -64,32 +64,27 @@
                 </div>
             </div>
     
-            <div class="contactos-content">
-                <div class="form-section">
-                    <h2>Envie-nos uma mensagem</h2>
-                    <form class="contacto-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="nome">Nome</label>
-                                <input type="text" id="nome" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="assunto">Assunto</label>
-                            <input type="text" id="assunto" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" rows="6" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
+            <form class="contacto-form" action="mailto:pnrparquedasnacoes@gmail.com" method="post" enctype="text/plain">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="assunto">Assunto</label>
+        <input type="text" id="assunto" name="assunto" required>
+    </div>
+    <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Enviar Mensagem</button>
+</form>
         </div>
     </main>
 </body>
