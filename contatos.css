@@ -120,15 +120,3 @@
 .submit-btn:hover {
     background: #184380;
 }
-
-.mapa {
-    height: 400px;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.mapa iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
