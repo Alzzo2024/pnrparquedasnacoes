@@ -1,33 +1,26 @@
-/* Prevent zoom and ensure proper viewport behavior */
-@viewport {
-    width: device-width;
-    zoom: 1.0;
-}
-
-@-ms-viewport {
-    width: device-width;
-}
-
-/* Base Mobile Styles */
 @media screen and (max-width: 768px) {
-    /* Global Mobile Settings */
-    body {
-        overflow-x: hidden;
-        width: 100%;
-        position: relative;
-    }
-
-    /* Header & Navigation for ALL pages */
+    /* Header & Navigation */
     header {
-        width: 100%;
-        position: relative;
         padding: 10px 20px;
     }
 
-    nav {
-        display: flex;
-        justify-content: space-between;
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        flex-direction: column;
         align-items: center;
+        gap: 20px;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .hamburger {
@@ -35,7 +28,6 @@
         cursor: pointer;
         padding: 10px;
         z-index: 1000;
-        position: relative;
     }
 
     .hamburger span {
@@ -59,117 +51,36 @@
         transform: rotate(-45deg) translate(7px, -6px);
     }
 
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        z-index: 999;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    /* Sobre Page Specific */
-    .sobre-main {
-        width: 100%;
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-    }
-
-    .sobre-banner {
-        width: 100%;
-        padding: 40px 20px;
-        margin: 0;
-    }
-
-    .sobre-banner h1 {
-        font-size: 2rem;
-    }
-
-    .sobre-content {
-        width: 100%;
-        max-width: 100%;
-        padding: 20px;
-        margin: 0;
-    }
-
-    .sobre-intro {
-        padding: 0 20px;
-        margin-bottom: 30px;
-    }
-
-    .valores-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 0 20px;
-        margin: 30px 0;
-    }
-
-    .valor-card {
-        width: 100%;
-        margin: 0;
-        padding: 20px;
-    }
-
-    .sobre-detalhes {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 0 20px;
-        margin: 30px 0;
-    }
-
-    .detalhe-texto,
-    .detalhe-imagem {
-        width: 100%;
-        margin: 0;
-    }
-
-    .detalhe-imagem img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    .equipa-section {
-        padding: 0 20px;
-        margin: 30px 0;
-    }
-
-    .equipa-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .membro-card {
-        width: 100%;
-        margin: 0;
-        text-align: center;
-    }
-
-    .membro-card img {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto 15px;
-    }
-
-    /* Other Pages Common Elements */
+    /* Main Banner */
     .banner {
         height: 180px;
     }
 
+    .small-banner {
+        height: 150px;
+    }
+
+    /* Sobre Page */
+    .sobre-content {
+        padding: 20px;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sobre-detalhes {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .equipa-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* News Grid */
     .news-grid,
     .noticias-grid,
     .propostas-grid {
@@ -182,18 +93,26 @@
     .noticia-card,
     .proposta-card {
         margin-bottom: 20px;
-        width: 100%;
     }
 
     /* Footer */
     .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 20px;
         text-align: center;
+        padding: 20px;
     }
 
-    /* Buttons and Interactive Elements */
+    .social-links {
+        justify-content: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Buttons */
     .aderir-btn,
     .news-button,
     .submit-btn {
@@ -206,14 +125,4 @@
     h2 { font-size: 1.5rem; }
     h3 { font-size: 1.2rem; }
     p { font-size: 1rem; }
-}
-
-/* Tablet Styles */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .valores-grid,
-    .news-grid,
-    .noticias-grid,
-    .propostas-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
