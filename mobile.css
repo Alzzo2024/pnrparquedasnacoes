@@ -1,3 +1,9 @@
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 * {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
@@ -5,9 +11,9 @@
 
 @media screen and (max-width: 768px) {
     body {
-        max-width: 100%;
         overflow-x: hidden;
-        position: relative;
+        width: 100%;
+        touch-action: manipulation;
     }
 
     /* Header & Navigation */
@@ -24,6 +30,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
 
     .logo img {
@@ -48,19 +55,12 @@
         display: flex;
     }
 
-    @media screen and (max-width: 768px) {
-        .hamburger {
-            display: block !important;
-            position: relative;
-            z-index: 1001;
-        }
-    
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
+    .hamburger {
+        display: block !important;
+        position: relative;
+        z-index: 1001;
+        cursor: pointer;
+        padding: 10px;
     }
 
     .hamburger span {
@@ -89,8 +89,19 @@
         margin-top: 80px;
     }
 
+    /* Banner Adjustments */
     .banner {
-        height: 180px;
+        height: 120px;
+    }
+
+    .small-banner {
+        height: 100px;
+    }
+
+    .banner img,
+    .small-banner img {
+        height: 100%;
+        object-fit: cover;
     }
 
     /* Grid Layouts */
@@ -117,12 +128,30 @@
 
     /* Sobre Page */
     .sobre-content {
-        padding: 20px;
+        padding-top: 100px;
+        margin-top: 20px;
     }
 
     .detalhe-imagem img {
         width: 100%;
         height: auto;
+    }
+
+    /* Contact Page */
+    .info-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .info-card {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contactos-content {
+        padding: 20px;
     }
 
     /* Footer */
@@ -155,4 +184,14 @@
     h2 { font-size: 1.5rem; }
     h3 { font-size: 1.2rem; }
     p { font-size: 1rem; }
+
+    /* Form Elements */
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
