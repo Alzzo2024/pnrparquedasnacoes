@@ -75,20 +75,6 @@ nav {
     box-shadow: 0 4px 8px rgba(236, 71, 56, 0.3);
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        gap: 1.5rem;
-    }
-    
-    .nav-links a {
-        font-size: 0.9rem;
-    }
-    
-    .aderir-btn {
-        padding: 10px 20px;
-    }
-}
-
 
 
 .banner-link {
@@ -116,19 +102,6 @@ nav {
     object-fit: cover;
     object-position: center;
     filter: brightness(0.95);
-}
-
-/* Add these for responsive behavior */
-@media (max-width: 768px) {
-    .banner {
-        height: 250px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .banner {
-        height: 500px;
-    }
 }
 
 
@@ -247,21 +220,14 @@ nav {
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-    .banner {
-        height: 250px;
-    }
-    
-    .news-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+.news-card {
+    text-decoration: none;
+    color: inherit;
 }
 
-@media (min-width: 1400px) {
-    .banner {
-        height: 500px;
-    }
+.news-button {
+    text-decoration: none;
+    display: inline-block;
 }
 
 
